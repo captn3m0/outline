@@ -9,5 +9,6 @@ WORKDIR $APP_PATH
 COPY . $APP_PATH
 RUN yarn
 RUN cp -r /opt/outline/node_modules /opt/node_modules
+RUN yarn build
 
-CMD yarn build && yarn start
+CMD yarn start
